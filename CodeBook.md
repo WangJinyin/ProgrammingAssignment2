@@ -1,28 +1,39 @@
-This data set is come from "Human Activity Recognition Using Smartphones Dataset Version 1.0". 
-==================================================================================
+===========================================================================
+
+This is from the Human Activity Recognition Using Smartphones Dataset.
+
+===========================================================================
+
 description of the variables:
 
-tBodyAcc-XYZ and tGravityAcc-XYZ: the acceleration signal was then separated into body and gravity acceleration signals. 
+subject: an identifier of the subject who carried out the experiment
+activity: the activity label
 
-tBodyAccJerk-XYZ and tBodyGyroJerk-XYZ: the body linear acceleration and angular velocity were derived in time to obtain Jerk signals;
+tBodyAcc-XYZ, tGravityAcc-XYZ: separate the acceleration signal using the low pass Butterworth filter with a corner frequency of 0.3 Hz
 
-tBodyAccMag, tGravityAccMag, tBodyAccJerkMag, tBodyGyroMag, tBodyGyroJerkMag: the magnitude of these three-dimensional signals were calculated using the Euclidean norm .
+tBodyAccJerk-XYZ, tBodyGyroJerk-XYZ: derive the body linear acceleration and angular velocity in time to obtain Jerk signals
 
-fBodyAcc-XYZ, fBodyAccJerk-XYZ, fBodyGyro-XYZ, fBodyAccJerkMag, fBodyGyroMag, fBodyGyroJerkMag: a Fast Fourier Transform (FFT) was applied to some of these signals producing fBodyAcc-XYZ, fBodyAccJerk-XYZ, fBodyGyro-XYZ, fBodyAccJerkMag, fBodyGyroMag, fBodyGyroJerkMag. (Note the 'f' to indicate frequency domain signals). 
+tBodyAccMag, tGravityAccMag, tBodyAccJerkMag, tBodyGyroMag, tBodyGyroJerkMag: the magnitude of above three-dimensional signals were calculated using the Euclidean norm
 
-mean(): Mean value
+fBodyAcc-XYZ, fBodyAccJerk-XYZ, fBodyGyro-XYZ, fBodyAccJerkMag, fBodyGyroMag, fBodyGyroJerkMag: apply a Fast Fourier Transform (FFT) to above signals
 
-std(): Stadard deviation
+"-XYZ" is used to denote 3-axial signals in the X, Y and Z directions. 
 
-'-XYZ' is used to denote 3-axial signals in the X, Y and Z directions.
-==================================================================================
-data: average of each variable for each activity and each subject.
+mean(): mean value
+std(): standard deviation
 
-==================================================================================
-tansformations or work that performed to clean up the data:
+=========================================================================
 
-1. Merges the training and the test sets to create one data set.
-2. Extracts only the measurements on the mean and standard deviation for each measurement.
+data: average of each variable for each activity and each subject
+
+=========================================================================
+
+transformations that performed to clean up the data: 
+
+1.Merges the training and the test sets to create one data set.
+2.Extracts only the measurements on the mean and standard deviation for each measurement. 
 3.Uses descriptive activity names to name the activities in the data set
 4.Appropriately labels the data set with descriptive variable names. 
 5.From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject.
+
+==========================================================================
